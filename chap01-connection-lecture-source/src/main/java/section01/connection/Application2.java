@@ -9,8 +9,9 @@ import java.util.Properties;
 
 /**
  * 목표<br><br>
- * 1. <br>
+ * properties 파일을 통해 jdbc 연결 <br>
  */
+//참고. properties파일은 실제 서비스 만들 떄 같이 깃에 올리면 안된다!!!!!!!!!!!!!!!!!!!!!!
 public class Application2 {
     public static void main(String[] args) {
         Properties properties =new Properties();
