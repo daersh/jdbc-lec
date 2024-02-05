@@ -2,9 +2,7 @@ package common;
 
 import java.io.FileReader;
 import java.io.IOException;
-import java.sql.Connection;
-import java.sql.DriverManager;
-import java.sql.SQLException;
+import java.sql.*;
 import java.util.Properties;
 
 public class JDBCTemplate {
@@ -37,5 +35,22 @@ public class JDBCTemplate {
             throw new RuntimeException(e);
         }
     }
-
+    public static void close(Statement connection){
+        try {
+            if(connection!=null&&!connection.isClosed())
+                connection.close();
+            System.out.println("Statement closed...");
+        } catch (SQLException e) {
+            throw new RuntimeException(e);
+        }
+    }
+    public static void close(ResultSet connection){
+        try {
+            if(connection!=null&&!connection.isClosed())
+                connection.close();
+            System.out.println("ResultSet closed...");
+        } catch (SQLException e) {
+            throw new RuntimeException(e);
+        }
+    }
 }
