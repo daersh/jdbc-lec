@@ -23,7 +23,7 @@ public class Application2 {
         empID = sc.nextLine();
         stmt= con.createStatement();
 
-        // 중요. 쿼리문 입력값 들어가는 곳에 ' '이 있어야 sql Injection 막을 수 있다!
+        // 중요. 쿼리문 입력값 들어가는 곳에 sql Injection 주의
         String query =  "SELECT * FROM EMPLOYEE WHERE EMP_ID = '" + empID+"'";
         stmt.executeQuery(query);
         rset= stmt.getResultSet();
