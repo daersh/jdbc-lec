@@ -18,4 +18,10 @@
         , ?
         )
     </entry>
+    <entry key="updateMenu">
+        UPDATE TBL_MENU
+           SET menu_name = ?
+             , menu_price = ?
+         WHERE menu_code = ?
+    </entry>
 </properties>
