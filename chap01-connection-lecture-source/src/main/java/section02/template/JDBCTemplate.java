@@ -16,7 +16,6 @@ public class JDBCTemplate {
     public static Connection getConnection(){
         Connection con = null;
         Properties properties = new Properties();
-
         try {
             properties.load(new FileReader("src/main/java/section01/connection/jdbc-config.properties"));
             String driver = properties.getProperty("driver");
@@ -31,7 +30,6 @@ public class JDBCTemplate {
         } catch (IOException | ClassNotFoundException | SQLException e) {
             throw new RuntimeException(e);
         }
-
         return con;
     }
 

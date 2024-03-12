@@ -15,7 +15,6 @@ public class Application1 {
         try {
             //설명. Class.forName:드라이버 클래스 로드
             Class.forName("com.mysql.cj.jdbc.Driver");
-
             con = DriverManager.getConnection("jdbc:mysql://localhost:3306","root","mariadb");
 
             System.out.println("con = " + con);
